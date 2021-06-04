@@ -1,0 +1,60 @@
+<body style="background-color: #e9ecef"></body>
+<div class="jumbotron jumbotron-fluid">
+
+  <div class="container">
+    <h3 class="display-4">Videojuegos agregados por ti</h3>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/agregar" role="button">
+        <span class="fas fa-plus-circle"></i>
+        </span>Agregar nuevo videojuego</a>
+
+        <a class="btn btn-success btn-lg" href="/ver-perfil" role="button">
+        <span class="fas fa-user-alt"></i>
+        </span>Ver perfil</a>
+    </p>
+    <hr>
+
+    <div class="input-group" style="padding-left: 78%;" ;>
+      <div class="form-outline">
+        <input type="search" class="form-control" placeholder="Buscar videojuego" aria-label="Search"
+          aria-describedby="search-addon" />
+      </div>
+      <button type="button" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+    <br>
+    <main>
+       {{#if juegos.length}}
+         <div class="table-responsive tabla">
+            <table class="table table-hover table-dark">
+              <thead>
+                <tr style="text-align: center;">
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th>Calificación</th>
+                  <th>Editar</th>
+                  <th>Eliminar</th>
+                  <th>Más Info</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each juegos}}
+                  <tr style="text-align: center;">
+                    <td>{{nombre}}</td>
+                    <td>{{precio}} Pesos</td>
+                    <td>{{calificacion}}</td>
+                    <td><a href="/editar/{{url}}">Editar</a></td>
+                    <td><a href="#" data-eliminar="{{id}}">Eliminar</a></td>
+                    <td><a href="/juegos/{{url}}">Info</a></td>
+                  </tr>
+                {{/each}}
+                </tbody>
+              </table>
+           </div>
+       {{else}}
+          <p>No hay juegos. Agrega uno.</p>
+       {{/if}}
+    </main>
+  </div>
+</div>

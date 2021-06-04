@@ -1,0 +1,97 @@
+<title>{{ nombrePagina }}</title>
+<link rel="stylesheet" href="/css/app.css">
+<link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.24006" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?" />
+
+<form action="/editar/{{juegos.url}}" method="POST" class="jotform-form">
+    <div role="main" class="form-all">
+        <div class="formLogoWrapper Center">
+            <img class="formLogoImg" src="/img/logo2.png" height="140" width="198">
+        </div>
+        <ul class="form-section page-section">
+            <li class="form-input-wide">
+                <div class="form-header-group  header-large">
+                    <div class="header-text httal htvam">
+                        <h1 class="form-header">AGREGAR VIDEOJUEGOS</h1>
+                    </div>
+                </div>
+            </li>
+
+            <li class="form-line jf-required">
+                <label class="form-label form-label-top form-label-auto">Nombre Del Videojuego
+                    <span class="form-required">*</span>
+                </label>
+                <div class="form-input-wide jf-required">
+                    <div>
+                        <span class="form-sub-label-container">
+                            <input type="text" name="nombre" class="form-textbox" value="{{juegos.nombre}}" autocomplete="off" required>
+                            <label class="form-sub-label"> Nombre </label>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="form-line jf-required">
+                <label class="form-label form-label-top form-label-auto">
+                    Precio del videojuego
+                    <span class="form-required">*</span>
+                </label>
+                <div class="form-input-wide jf-required">
+                    <div>
+                        <span class="form-sub-label-container">
+                            <input type="text" name="precio" class="form-textbox" value="{{juegos.precio}}" autocomplete="off" required>
+                            <label class="form-sub-label"> Precio </label>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="form-line jf-required">
+                <label class="form-label form-label-top form-label-auto">
+                    Calificacion del videojuego
+                    <span class="form-required">*</span>
+                </label>
+                <div class="form-input-wide jf-required">
+                    <div>
+                        <span class="form-sub-label-container">
+                            <input type="text" name="calificacion" class="form-textbox" value="{{juegos.calificacion}}" autocomplete="off" required>
+                            <label class="form-sub-label"> Calificacion </label>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="form-line jf-required">
+                <label class="form-label form-label-top form-label-auto">
+                    Descripción
+                </label>
+                <label class="form-sub-label"> Digita una descripción detallada de el videojuego </label>
+            </li>
+
+            <div class="form-input-wide jf-required">
+                <div>
+                    <span class="form-sub-label-container">
+                        <input type="hidden" id="x" value="{{{juegos.descripcion}}}" name="descripcion">
+                        <trix-editor input="x"></trix-editor>
+                    </span>
+                </div>
+            </div>
+
+            <li class="form-line jf-required">
+                <label class="form-label form-label-top form-label-auto">
+                    Categorias de clasificación
+                </label>
+                <label class="form-sub-label"> Por favor selecciona la categoria a la que pertenece el juego </label>
+            </li>
+            <ul class="lista-categorias">
+                {{#seleccionarSkills juegos.skills}}
+                {{/seleccionarSkills}}
+            </ul>
+            <div class="form-input-wide">
+                <div class="form-buttons-wrapper form-buttons-auto jsTest-button-wrapperField">
+                    <input type="hidden" name="skills" id="skills">
+                    <button type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField">
+                        Guardar Cambios
+                    </button>
+                </div>
+            </div>
+        </ul>
+    </div>
+</form>

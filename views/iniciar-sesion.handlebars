@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/login.css">
+
+<form action="/iniciar-sesion" method="POST">
+    <div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <!-- Icon -->
+        <div class="fadeIn first">
+        <a href="/"><img src="/img/xbox.png" id="icon" alt="User Icon" /></a> 
+        <h1>Iniciar Sesión</h1>
+        </div>
+        {{#if mensajes}}
+            <div class="alertas">
+                {{#mostrarAlertas mensajes}}
+                {{/mostrarAlertas}}
+            </div>
+        {{/if}}
+        <!-- Login Form -->
+        <form>
+        <input type="email" id="campos" class="fadeIn second" name="email" placeholder="correo electrónico">
+        <input type="password" id="campos" class="fadeIn third" name="password" placeholder="Contraseña">
+        <input type="submit" class="fadeIn fourth" value="Ingresar">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+        <a class="underlineHover" href="/crear-cuenta">Registrarme</a>
+        <a class="underlineHover" href="#">/ Recuperar contraseña</a>
+        </div>
+
+    </div>
+    </div>
+</form>

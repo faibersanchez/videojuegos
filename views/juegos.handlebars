@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/css/info.css">
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+<section>
+    <div class="container">
+        <h1 class="text-center">{{juegos.nombre}}</h1>
+        <hr>
+        <div class="text-center">
+            <p>{{{juegos.descripcion}}}</p>
+            <br>
+
+            {{#each juegos.skills}}
+            <p>Su clasificación es:
+                <a href="/nosotros"><li>{{this}}</li></a>
+                {{/each}}
+            </p>
+            <a href="/panel" class="button text-center">Ir al panel</a>
+        </div>
+    </div>
+</section>

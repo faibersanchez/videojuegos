@@ -1,0 +1,41 @@
+        img {
+            max-width: 100%;
+        }
+        
+        h2 {
+            color: #f7f1f1;
+            margin: 0;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 16px;
+        }
+        
+        .p-subtitle {
+            font-size: 15px;
+            color: #000000;
+            line-height: 2;
+        }
+        
+        .sp-title {
+            font-size: 60px;
+            margin-bottom: 40px;
+            color: #000000;
+        }
+        
+        .section-title {
+            margin-bottom: 70px;
+        }
+        /* ===========================
+  Responsive
+==============================*/
+        
+        @media only screen and (max-width: 767px) {
+            h1,
+            .sp-title {
+                font-size: 45px;
+            }
+        }
+        /* small mobile :320px. */

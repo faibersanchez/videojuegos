@@ -1,0 +1,137 @@
+trix-toolbar,
+trix-editor {
+    background-color: white!important;
+}
+
+trix-toolbar {
+    padding: 1rem;
+}
+
+trix-editor {
+    font-size: 1.8rem;
+    min-height: 30rem!important;
+    padding: 2rem;
+}
+
+trix-editor h1,
+trix-editor blockquote {
+    color: black;
+}
+
+trix-toolbar .trix-button-group {
+    margin-bottom: 0;
+}
+
+trix-toolbar .trix-button--icon-strike {
+    display: none;
+}
+
+.campo.descripcion {
+    display: block;
+}
+
+.form-all {
+    background-image: none;
+}
+
+.form-all {
+    position: relative;
+}
+
+.form-all {
+    margin-top: 160px !important;
+}
+
+.formLogoWrapper {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+}
+
+.form-all:before {
+    background: none !important;
+}
+
+.formLogoWrapper.Center {
+    top: -150px;
+    text-align: center;
+}
+
+.lista-categorias {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.lista-categorias li {
+    border: 2px solid #00C897;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    flex: 0 0 calc( 50% - 1rem);
+    text-align: center;
+    border-radius: 1rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lista-categorias li.activo {
+    background-color: #00C897;
+}
+
+.lista-categorias li:hover {
+    cursor: pointer;
+}
+
+.alertas {
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 65px;
+}
+
+.alerta {
+    padding: 1rem 3rem;
+    color: white;
+    font-size: 1.0rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: .3rem;
+}
+
+.correcto {
+    background-color: #00C897;
+}
+
+.error {
+    background-color: #C80045;
+}
+
+.desaparecer {
+    opacity: 0;
+}
+
+.imgRedonda {
+    margin-top: 8%;
+    width: 400px;
+    height: 300px;
+    border-radius: 150px;
+    cursor: pointer;
+}
+
+.imgRectangular {
+    width: 400px;
+    height: 300px;
+}
+
+.imgPeque {
+    width: 100px;
+    height: 100px;
+}

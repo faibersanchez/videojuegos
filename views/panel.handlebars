@@ -1,0 +1,57 @@
+<title>{{ nombrePagina }}</title>
+
+<body style="background-color: #e9ecef"></body>
+<div class="jumbotron jumbotron-fluid">
+
+  <div class="container">
+    <h1 class="display-4">Videojuegos</h1>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/agregar" role="button">
+        <span class="fas fa-plus-circle"></i>
+        </span>Agregar videojuego</a>
+    </p>
+    <hr>
+
+    <div class="input-group" style="padding-left: 78%;" ;>
+      <div class="form-outline">
+        <input type="search" class="form-control" placeholder="Buscar videojuego" aria-label="Search"
+          aria-describedby="search-addon" />
+      </div>
+      <button type="button" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+    <br>
+    <main>
+       {{#if juegos.length}}
+         <div class="table-responsive">
+            <table class="table table-hover table-dark">
+              <thead>
+                <tr style="text-align: center;">
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th>Calificación</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each juegos}}
+                  <tr style="text-align: center;">
+                    <td>{{nombre}}</td>
+                    <td>{{precio}} Pesos</td>
+                    <td>{{calificacion}}</td>
+                    <td>
+                      <a href="/editar/{{url}}"><span class="btn btn-warning btn-sm"><span class="far fa-edit"></span></span></a>
+                      <a href="/juegos/{{url}}"><span class="btn btn-primary btn-sm" ><span class="fas fa-info-circle"></span></span></a>
+                    </td>
+                   </tr>
+                {{/each}}
+                </tbody>
+              </table>
+            </div>
+       {{else}}
+          <p>No hay juegos</p>
+       {{/if}}
+    </main>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<body style="background-color: #e9ecef"></body>
+<link rel="stylesheet" href="/css/app.css">
+
+
+<div class="container">
+    <div class="text-center"> 
+        <a><img src="/uploads/perfiles/{{imagen}}" class="imgRedonda"  data-bs-toggle="modal" data-bs-target="#exampleModal"></a>
+    </div>
+    <h1 class="text-center">{{usuario.nombre}}</h1>
+    <h3 class="text-center">{{usuario.email}}</h3>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{usuario.nombre}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="text-center">
+        <img src="/uploads/perfiles/{{imagen}}" class="imgRectangular">
+        
+        <div class="modal-footer">
+            <hr>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+
+</script>
+
